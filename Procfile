@@ -1,0 +1,1 @@
+web: gunicorn mybot.wsgi --log-file -
