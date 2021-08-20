@@ -80,6 +80,10 @@ class VKMessageHandler:
         # Отправка ответов пользователю
         for answer_dict in answer_list:
             self.send_answer(user.id, answer_dict)
+            
+            # С мобильного приложения быстрая отправка нескольких сообщений багованно отображается
+            # небольшая задержка между отправкой сообщений решает эту проблему
+            time.sleep(0.1)
 
         return HttpResponse('ok', content_type="text/plain", status=200)
 
