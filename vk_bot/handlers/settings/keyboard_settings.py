@@ -41,7 +41,7 @@ def get_subject_keyboard(course_num):
     subj_colors = list(chunks(colors, 2))
     subj_chunked = list(chunks(subj_list, 2))
 
-    labels = subj_chunked + [TextToAnswer.RETURN_MENU.title()]
+    labels = subj_chunked + [upper_first(TextToAnswer.RETURN_MENU)]
     colors = subj_colors + [VKKeyboardColor.RED]
 
     return VKKeyboard().create_json(
