@@ -61,7 +61,6 @@ class VKKeyboard:
             colors = [colors] * len(labels)
         for label, color in zip(labels, colors):
             if type(label) == str:
-                print(label, color)
                 self.add_button(label, color)
             else:
                 if one_color:
